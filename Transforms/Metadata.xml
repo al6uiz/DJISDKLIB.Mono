@@ -1,0 +1,43 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <!--<remove-node path="/api/package[@name='dji.common.error']/class[@name='DJIError']/method[@name='getDJIError']" />
+  <remove-node path="/api/package[@name='dji.common.error']/class[@name='DJIError']/method[@name='getDjiError']" />-->
+
+  <remove-node path="/api/package[starts-with(@name,'com.google.gson')]" />
+  <remove-node path="/api/package[starts-with(@name,'dji.thirdparty')]" />
+  <remove-node path="/api/package[starts-with(@name,'dji.sdksharedlib')]" />
+  <remove-node path="/api/package[starts-with(@name,'dji.midware')]" />
+  <remove-node path="/api/package[starts-with(@name,'dji.internal')]" />
+  <remove-node path="/api/package[starts-with(@name,'net.')]" />
+  <remove-node path="/api/package[starts-with(@name,'org.')]" />
+ 
+
+  <attr path="/api/package[@name='dji.common.camera']/class[@name='CameraSSDRawVideoResolutionAndFrameRate']/method[@name='compareTo' 
+    and count(parameter)=1
+    and parameter[1][@type='dji.common.camera.CameraSSDRawVideoResolutionAndFrameRate']]/parameter[1]"
+      name="managedType">Java.Lang.Object</attr>
+
+  <attr path="/api/package[@name='dji.common.camera']/class[@name='ResolutionAndFrameRate']/method[@name='compareTo' 
+    and count(parameter)=1
+    and parameter[1][@type='dji.common.camera.ResolutionAndFrameRate']]/parameter[1]"
+      name="managedType">Java.Lang.Object</attr>
+  <!--<attr path="/api/package[@name='dji.midware.data.forbid']/class[@name='DJIFlyForbidController.DataComparator']/method[@name='compare' 
+    and count(parameter)=2 
+    and parameter[1][@type='dji.midware.data.forbid.FlyForbidElement'] 
+    and parameter[2][@type='dji.midware.data.forbid.FlyForbidElement']]/parameter[1]"  name="managedType">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='dji.midware.data.forbid']/class[@name='DJIFlyForbidController.DataComparator']/method[@name='compare' 
+    and count(parameter)=2 
+    and parameter[1][@type='dji.midware.data.forbid.FlyForbidElement'] 
+    and parameter[2][@type='dji.midware.data.forbid.FlyForbidElement']]/parameter[2]"  name="managedType">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='dji.midware.ble']/class[@name='BluetoothLeService']/method[@name='Destroy' 
+    and count(parameter)=0]" name="name">DestroyStatic</attr>
+  <attr path="/api/package[@name='dji.midware.data.manager.P3']/class[@name='ServiceManager']/method[@name='Destroy' 
+    and count(parameter)=0]" name="name">DestroyStatic</attr>-->
+
+</metadata>
